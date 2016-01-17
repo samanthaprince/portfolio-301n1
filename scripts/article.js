@@ -1,6 +1,6 @@
 var articles = [];
 
-function Article(opts) {
+function Article (opts) {
   this.title = opts.title;
   this.category = opts.category;
   this.author = opts.author;
@@ -18,7 +18,7 @@ Article.prototype.toHtml = function() {
   $newArticle.find('.byline a').html(this.author);
   $newArticle.find('.byline a').attr('href', this.authorUrl);
   $newArticle.find('time[pubdate]').attr('datetime', this.publishedOn);
-  $newArticle.find('article-body').html(this.body);
+  $newArticle.find('.article-body').html(this.body);
 
   $newArticle.find('time[pubdate]').attr('title',this.publishedOn);
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
