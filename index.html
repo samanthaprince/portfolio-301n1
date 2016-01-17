@@ -3,17 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <title>Samantha's Portfolio</title>
-    
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/modules.css">
   </head>
+
   <body>
-    <main>
-      <header>
-        <h1>Samantha Prince</h1>
-      </header>
-      <nav>
+    <header>
+      <h1>Samantha Prince</h1>
+    </header>
+      <nav class = "main-nav">
         <ul>
           <li>Blog Posts</li>
           <li>About Me</li>
@@ -21,24 +20,50 @@
           <li><a href="https://www.linkedin.com/in/samanthaprince928?trk=hp-identity-name" target="_blank">LinkedIn</a></li>
         </ul>
       </nav>
-      <section id="articles">
-        <article class="template" data-category="cat">
-          <header>
-            <h1>Title</h1>
-            <div class = "byline">
-              By <address><a href "">Author Name></a></address>
-              published <time pubdate datetime="2000-01-01">Publish Time</time>
-            </div>
-          </header>
-          <section class = "article-body"></section>
-        </article>
-      </section>
-    </main>
+
+      <main>
+        <section id="articles">
+          <div>
+            <ul id="filters">
+              <li>
+                <select id="author-filter">
+                  <option value="">-- Filter by Author --</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <article class="template" data-category="cat">
+            <header>
+              <h1>Title</h1>
+              <div class = "byline">
+                By <address><a href "">Author Name></a></address>
+                published <time pubdate datetime="2000-01-01">Publish Time</time>
+              </div>
+            </header>
+            <section class = "article-body"></section>
+            <a href="#" class="read-more"> Read more &rarr;</a>
+          </article>
+        </section>
+        <section id="about" class="tab-content">
+          <header> Welcome to my blog </header>
+          <section>
+            <h1>Some of my interestes are: </h1>
+            <ul>
+              <li>Coding</li>
+              <li>Baking</li>
+              <li>Playing with my dog, Winston</li>
+              <li>Traveling</li>
+            </ul>
+          </section>
+        </section>
+      </main>
+
     <footer>
       &copy; 2016 | Samantha Prince | Portfolio Project
     </footer>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src = "scripts/blogArticles.js"></script>
     <script src = "scripts/article.js"></script>
+    <script src = "scripts/articleView.js"></script>
   </body>
 </html>
