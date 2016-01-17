@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Samantha's Portfolio Blog</title>
+    <title>Samantha's Portfolio</title>
     //add vendor style sheet if any
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="styles/base.css">
@@ -11,21 +11,24 @@
   <body>
     <main>
       <header>
-        <h1>Samantha's Blog</h1>
+        <h1>Samantha Prince</h1>
       </header>
       <nav>
         <ul>
           <li>Blog Posts</li>
           <li>About Me</li>
           <li><a href="https://github.com/samanthaprince" target="_blank">Github</li>
+          <li><a href="https://www.linkedin.com/in/samanthaprince928?trk=hp-identity-name" target="_blank">LinkedIn</li>
         </ul>
       </nav>
       <section id="articles">
         <article class="template" data-category="cat">
           <header>
             <h1>Title</h1>
-            <div class = "byline"><address><a href "">Author Name</a></address>
-            //add published date information here
+            <div class = "byline">
+              By <address><a href "">Author Name</a></address>
+              published <time pubdate datetime="2000-01-01">Publish Time</time>
+            </div>
           </header>
           <section class = "article-body"></section>
         </article>
