@@ -46,7 +46,7 @@ articleView.handleMainNav = function() {
     $('.tab-content').hide();
     $('#' + $(this).attr('data-content')).show();
   });
-  $('.main-nav .tab').click();
+  $('.main-nav .tab:first').click();
 };
 
 articleView.setTeasers = function() {
