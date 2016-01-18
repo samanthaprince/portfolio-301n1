@@ -9,8 +9,8 @@ var rawData = [
   },
   {
     title:      'Maybe things are looking Up?',
-    category:   'Career Change 101',
-    author:     'Samantha Prince',
+    category:   'Test category',
+    author:     'Test Author',
     authorUrl:   'https://github.com/samanthaprince/sea-301n1/tree/branch1/class-02-jquery-and-events/sam_pab',
     publishedOn: '2016-01-06',
     body:         '<p>The second day of class started to get better, until we used Git/Github. Click the link to see our second pair assignment.</p>'
