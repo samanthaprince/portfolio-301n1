@@ -1,3 +1,11 @@
+.site-header {
+  color: blue;
+}
+
+.main-nav {
+  font-size: 100%;
+}
+
 body {
   line-height: 1.5;
   font-size: 100%
@@ -32,9 +40,9 @@ a, a:link, a:active {
 }
 
 a:hover, a:focus {
-  color: #29506D;
+  color: blue;
 }
 
-a:visited {
-  
+footer {
+  background-color: silver;
 }
