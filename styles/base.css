@@ -1,15 +1,17 @@
-.site-header {
-  color: blue;
-}
-
 .main-nav {
-  font-size: 100%;
+  font-size: 50%;
+  display: block;
 }
 
 body {
   line-height: 1.5;
   font-size: 100%
   color: #313131;
+}
+
+/*If there were images on the page */
+img {
+  max-width: 100%;
 }
 
 main {
@@ -21,6 +23,16 @@ address {
   display: inline-block;
 }
 
+/*taken from skeleton*/
+select {
+  height: 20px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
 hr {
   margin: 1em;
   width: 80%;
@@ -40,9 +52,9 @@ a, a:link, a:active {
 }
 
 a:hover, a:focus {
-  color: blue;
+  color: black;
 }
 
 footer {
-  background-color: silver;
+  background-color: #ddfff7;
 }
