@@ -11,7 +11,8 @@ body {
 
 /*If there were images on the page */
 img {
-  max-width: 100%;
+  max-width: 20%;
+  float: absolute;
 }
 
 main {
@@ -23,7 +24,7 @@ address {
   display: inline-block;
 }
 
-/*taken from skeleton*/
+/*taken from skeleton.css*/
 select {
   height: 20px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */

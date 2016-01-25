@@ -2,6 +2,41 @@
   display: none;
 }
 
+.site-header {
+  background: #aaffea;
+  color: #333c3a;
+  font-size: 100%;
+}
+
+.main-nav {
+  display: block;
+  padding: 0.1em;
+}
+
+.main-nav ul {
+  display: block;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em 2em;
+  border-bottom: 1px solid #ccc;
+}
+
+#winston {
+  float: right;
+  display: inline;
+}
+
+#filters {
+  padding: 0;
+  list-style: none;
+}
+
 .draft {
   display: none;
 }
@@ -22,4 +57,17 @@
 
 .pull-right {
   float: right;
+}
+
+@media only screen and (min-width: 960px) {
+
+  .main-nav ul {
+    display: inline;
+    padding: 3em;
+  }
+  .main-nav li {
+    display: inline;
+    margin-top: 2em;
+  }
+
 }
