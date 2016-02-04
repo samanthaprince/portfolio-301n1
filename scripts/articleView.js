@@ -44,7 +44,7 @@ articleView.handleCategoryFilter = function() {
 articleView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function(e) {
     $('.tab-content').hide();
-    $('#' + $(this).attr('data-content')).show();
+    $('#' + $(this).attr('data-content')).fadeIn();
   });
   $('.main-nav .tab:first').click();
 };
