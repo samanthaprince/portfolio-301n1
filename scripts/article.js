@@ -30,7 +30,7 @@ Article.prototype.toHtml = function() {
 
   $newArticle.append('<hr>');
 
-  return $newArticle;
+  return $newArticle; 
 };
 
 rawData.sort(function(a,b) {
