@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Samantha's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="vendor/normalize.css">
+    <link rel="stylesheet" href="vendor/skeleton.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+
+    <script id="article-template" type="text/x-handlebars-template">
+      <article data-category="{{category}}" data-author="{{author}}">
+        <header>
+          <h1> {{title}} </h1>
+          <div class = "byline">
+          By <address><a href="{{authorUrl}}">{{author}}</a></address>
+          {{publishedOn}} <time pubdate datetime="2000-01-01">{{publishedStatus}}</time>
+        </header>
+        <section class = "article-body"{{{body}}}</section>
+        <a href="#" class="read-on">Read on </a>
+      </article>
+    </script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <h1>Samantha Prince</h1>
+    <a id="toggle"><span></span></a>
+
+    <nav class="main-nav">
+      <div id="menu">
+      <ul>
+        <li class="tab button" data-content="articles"><a href="#">Blog Posts</a></li>
+        <li class="tab button" data-content="about"><a href="#">About Me</a></li>
+        <li class="button"><a href="https://github.com/samanthaprince" target="_blank">Github</a></li>
+        <li class="button"><a href="https://www.linkedin.com/in/samanthaprince928?trk=hp-identity-name" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+    </nav>
+    </header>
+    <main>
+      <section id="articles" class="tab-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="author-filter">
+                <option value=""> Filter by Author </option>
+              </select>
+            </li>
+            <li>
+              <select id="category-filter">
+                <option value=""> Filter by Categories </option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <article class="template" data-category="cat">
+          <header>
+            <h1>Title</h1>
+            <div class = "byline">
+              By <address><a href "">Author Name></a></address>
+              published <time pubdate datetime="2000-01-01">Publish Time</time>
+            </div>
+          </header>
+          <section class = "article-body"></section>
+          <a href="#" class="read-more"> Read more &rarr;</a>
+        </article>
+      </section>
+      <section id="about" class="tab-content">
+        <header> Welcome to my blog </header>
+        <section>
+          <h1>Some of my interestes are: </h1>
+          <ul>
+            <li>Coding</li>
+            <li>Baking</li>
+            <li>Traveling</li>
+            <li> Playing with my dog, Winston</li>
+            <img src="images/winston.jpg">
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2016 | Samantha Prince | Portfolio Project
+    </footer>
+    <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src = "scripts/blogArticles.js"></script>
+    <script src = "scripts/article.js"></script>
+    <script src = "scripts/articleView.js"></script>
+  </body>
+</html>
