@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
 
-    <script id="article-template" type="text-x-handlebars-template">
+    <script id="article-template" type="text/x-handlebars-template">
       <article data-category="{{category}}" data-author="{{author}}">
         <header>
           <h1> {{title}} </h1>
@@ -19,7 +19,7 @@
           {{publishedOn}} <time pubdate datetime="2000-01-01">{{publishedStatus}}</time>
         </header>
         <section class = "article-body"{{{body}}}</section>
-        <a href="#" class="read-on">Read on &arr; </a>
+        <a href="#" class="read-on">Read on </a>
       </article>
     </script>
   </head>
