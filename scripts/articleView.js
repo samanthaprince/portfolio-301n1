@@ -58,11 +58,18 @@ articleView.setTeasers = function() {
   });
 };
 
+articleView.initIndexPage = function(){
+  Article.all.forEach(function(a){
+    $('#articles').append(a.toHtml());
+  });
+
 //function calls
-$(document).ready(function(){
+
   articleView.populateFilters();
   articleView.handleAuthorFilter();
   articleView.handleCategoryFilter();
   articleView.handleMainNav();
   articleView.setTeasers();
-});
+
+
+};
