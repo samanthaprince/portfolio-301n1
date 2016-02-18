@@ -19,14 +19,27 @@ Article.prototype.toHtml = function() {
   $('#articles').append(html);
 };
 
-rawData.sort(function(a,b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
+Article.loadAll = function(rawData) {
+  rawData.sort(function(a,b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
+  rawData.forEach(function(ele){
+    articles.push(new Article(ele));
+  });
+};
 
-rawData.forEach(function(ele){
-  articles.push(new Article(ele));
-});
-
-articles.forEach(function(a){
-  $('#articles').append(a.toHtml());
-});
+Article.fetchAll = function(){
+  if (localStorage.rawData) {
+    Article.loadAll(JSON.parse(localStorage.rawData));
+    articleView.initIndexPage();
+  } else {
+    $.getJSON('data/blogArticles.json', function(data){
+      Article.loadAll(data);
+      localStorage.rawData = JSON.stringify(data);
+      articleView.initIndexPage();
+    });
+  }
+};
+// articles.forEach(function(a){
+//   $('#articles').append(a.toHtml());
+// });
