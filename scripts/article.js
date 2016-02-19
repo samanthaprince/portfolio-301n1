@@ -10,13 +10,14 @@ function Article (opts) {
 Article.all = [];
 
 Article.prototype.toHtml = function() {
-  var $newArticle = $('#article-template').html();
-  var compileTemplate = Handlebars.compile($newArticle);
-
+  // var $newArticle = $('#article-template').html();
+  // var compileTemplate = Handlebars.compile($newArticle);
+  var template = Handlebars.compile($('#article-template').text());
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
   this.publishedStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
-  var html = compileTemplate(this);
-  $('#articles').append(html);
+  // var html = compileTemplate(this);
+  //  $('#articles').append(html);
+  return template(this);
 };
 
 Article.loadAll = function(rawData) {
