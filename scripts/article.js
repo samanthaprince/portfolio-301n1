@@ -1,5 +1,3 @@
-var articles = [];
-
 function Article (opts) {
   this.title = opts.title;
   this.category = opts.category;
@@ -8,6 +6,8 @@ function Article (opts) {
   this.publishedOn = opts.publishedOn;
   this.body = opts.body;
 }
+
+Article.all = [];
 
 Article.prototype.toHtml = function() {
   var $newArticle = $('#article-template').html();
@@ -24,7 +24,7 @@ Article.loadAll = function(rawData) {
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
   });
   rawData.forEach(function(ele){
-    articles.push(new Article(ele));
+    Article.all.push(new Article(ele));
   });
 };
 
