@@ -17,9 +17,10 @@
           <div class = "byline">
           By <address><a href="{{authorUrl}}">{{author}}</a></address>
           {{publishedOn}} <time pubdate datetime="2000-01-01">{{publishedStatus}}</time>
+        </div>
         </header>
         <section class = "article-body"{{{body}}}</section>
-        <a href="#" class="read-on">Read on </a>
+        <a href="#" class="read-on">Read more</a>
       </article>
     </script>
   </head>
@@ -88,11 +89,11 @@
     </footer>
     <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-    <!-- <script src = "scripts/blogArticles.js"></script> -->
-    <script src = "scripts/article.js"></script>
     <script src = "scripts/articleView.js"></script>
+    <script src = "scripts/article.js"></script>
     <script>
       Article.fetchAll();
+      // console.log(articleView);
     </script>
   </body>
 </html>
