@@ -10,13 +10,9 @@ function Article (opts) {
 Article.all = [];
 
 Article.prototype.toHtml = function() {
-  // var $newArticle = $('#article-template').html();
-  // var compileTemplate = Handlebars.compile($newArticle);
   var template = Handlebars.compile($('#article-template').text());
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
   this.publishedStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
-  // var html = compileTemplate(this);
-  //  $('#articles').append(html);
   return template(this);
 };
 
@@ -34,13 +30,10 @@ Article.fetchAll = function(){
     Article.loadAll(JSON.parse(localStorage.rawData));
     articleView.initIndexPage();
   } else {
-    $.getJSON('data/blogArticles.json', function(data){
+    $.getJSON('/data/blogArticles.json', function(data){
       Article.loadAll(data);
       localStorage.rawData = JSON.stringify(data);
       articleView.initIndexPage();
     });
   }
 };
-// articles.forEach(function(a){
-//   $('#articles').append(a.toHtml());
-// });
