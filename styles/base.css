@@ -1,0 +1,61 @@
+.main-nav {
+  font-size: 50%;
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 100%
+  color: #313131;
+}
+
+/*If there were images on the page */
+img {
+  max-width: 20%;
+  float: absolute;
+}
+
+main {
+  margin: auto;
+  width: 80%;
+}
+
+address {
+  display: inline-block;
+}
+
+/*taken from skeleton.css*/
+select {
+  height: 20px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+hr {
+  margin: 1em;
+  width: 80%;
+}
+
+p {
+  font-size: 1em;
+}
+
+address {
+  display: inline-block;
+}
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: #777;
+}
+
+a:hover, a:focus {
+  color: black;
+}
+
+footer {
+  background-color: #ddfff7;
+}
